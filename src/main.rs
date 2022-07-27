@@ -1,11 +1,24 @@
-fn main() {
-    let a = rprompt::prompt_reply_stdout("Enter first number: ").unwrap();
-    let b = rprompt::prompt_reply_stdout("Enter second number: ").unwrap();
-    let cal = rprompt::prompt_reply_stdout("[1] Add [2] Subtract [3] Multiply [4] Divide: ").unwrap();
+use std::io::Write;
 
-    let a_int: i32 = a.parse().unwrap();
-    let b_int: i32 = b.parse().unwrap();
-    let cal_int: i32 = cal.parse().unwrap();
+fn main() {
+    let mut a = String::new();
+    println!("Enter first number: ");
+    std::io::stdout().flush().unwrap(); // Console output must be flushed to remove errors.
+    std::io::stdin().read_line(&mut a).unwrap();
+
+    let mut b = String::new();
+    println!("Enter second number: ");
+    std::io::stdout().flush().unwrap();
+    std::io::stdin().read_line(&mut b).unwrap();
+
+    println!("[1] Add [2] Subtract [3] Multiply [4] Divide: ");
+    std::io::stdout().flush().unwrap();
+    let mut cal = String::new();
+    std::io::stdin().read_line(&mut cal).unwrap();
+
+    let a_int: i32 = a.trim().parse().unwrap();
+    let b_int: i32 = b.trim().parse().unwrap();
+    let cal_int: i32 = cal.trim().parse().unwrap();
 
     let mut ans = 0;
 
