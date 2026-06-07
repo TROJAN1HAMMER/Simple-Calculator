@@ -189,8 +189,8 @@ The answer is 45
 
 ## 👥 Authors
 
-- **[TROJAN1HAMMER](https://github.com/TROJAN1HAMMER)** - Original Developer
-- **HARSHITH B** - Contributor
+- **[TROJAN1HAMMER]/Harshith B(https://github.com/TROJAN1HAMMER)** - Original Developer
+- **[dotslashinit-sh]((https://github.com/dotslashinit-sh)** - Contributor
 
 ---
 
